@@ -94,4 +94,29 @@
   color: #2a0f52;
 }
 
+@media (max-width: 768px) {
+  .side-navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .side-navbar-links {
+    margin-top: 2rem;
+  }
+
+  .side-navbar-links li {
+    margin-bottom: 1.5rem;
+  }
+
+  .side-navbar-github {
+    position: static;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
 
