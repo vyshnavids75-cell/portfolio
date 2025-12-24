@@ -96,26 +96,37 @@
 
 @media (max-width: 768px) {
   .side-navbar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 1.5rem;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 1.5rem !important;
+    display: block !important; 
     border-right: none;
     border-bottom: 1px solid #eee;
   }
 
   .side-navbar-links {
-    margin-top: 2rem;
+    margin-top: 1rem !important;
+    flex-grow: 0 !important;
   }
 
   .side-navbar-links li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem !important;
   }
 
   .side-navbar-github {
-    position: static;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-top: 2rem !important;
+    padding-bottom: 1rem;
+    display: flex !important;
+    justify-content: flex-start;
+  }
+
+  .side-navbar-button {
+    width: 140px; 
   }
 }
 
