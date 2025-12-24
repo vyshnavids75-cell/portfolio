@@ -30,7 +30,8 @@ const About: React.FC = () => {
 
         <p className="about-text">
           Alongside my professional work, I actively upskill myself by learning{" "}
-          <strong>React and MongoDB</strong> to broaden my technical expertise.
+          <strong>React and MongoDB</strong> and have built personal projects using these technologies to strengthen my expertise.
+          These projects have helped me apply my learning in practical scenarios and gain hands-on experience with full-stack development.
           I enjoy solving complex problems, writing clean and maintainable code,
           and collaborating with cross-functional teams to deliver reliable,
           user-centric solutions.
@@ -39,6 +40,7 @@ const About: React.FC = () => {
         <p className="about-text">
           I am driven by continuous learning and a passion for building impactful
           software that creates meaningful user experiences.
+          My goal is to grow as a developer while creating software that makes a positive impact.
         </p>
       </div>
 
