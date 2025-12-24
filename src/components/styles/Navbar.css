@@ -11,7 +11,6 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 1000;
-  flex-grow: 1;
 }
 
 .side-navbar-logo {
@@ -23,7 +22,8 @@
 .side-navbar-links {
   list-style: none;
   padding: 0;
-  margin-bottom: 19rem;
+  margin-top: 7rem;
+  flex-grow: 1;
 }
 
 .side-navbar-links li {
