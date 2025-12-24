@@ -36,16 +36,18 @@ const Skills: React.FC = () => {
             <div className="skills-description">
                 <p>
                     I have hands-on experience building responsive and dynamic web applications
-                    using modern frontend frameworks like Angular and React. On the backend, I
-                    develop scalable APIs with Node.js and Express, and manage data efficiently
+                    using modern frontend frameworks like {" "}<strong>Angular</strong> and {""}
+                    <strong>React</strong>. On the backend, I develop scalable APIs with {" "}
+                    <strong>Nodejs</strong>  and {" "}<strong>Express</strong> , and manage data efficiently
                     using MongoDB and Datastax. I am also comfortable with essential development
-                    tools such as Git for version control, VS Code for coding, and Postman for API
+                    tools such as {" "} <strong>Git</strong> for version control, {" "}<strong>
+                        VS Code</strong> for coding, and {" "} <strong>Postman</strong> for API
                     testing. Continuously learning and experimenting with new technologies, I
                     strive to write clean, maintainable code and deliver high-quality software solutions.
                 </p>
             </div>
 
-                <Footer />
+            <Footer />
 
         </section>
     )
