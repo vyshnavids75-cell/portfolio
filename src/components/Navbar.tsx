@@ -67,9 +67,15 @@ const Navbar: React.FC = () => {
             </ul>
 
             <div className="side-navbar-github">
-               <FaGithub size={23} color="#2a0f52" style={{ position: "relative", top: "0.5rem", right: "0.7rem" }} />
-               <button className="side-navbar-button" onClick={() => window.open("https://github.com/vyshnavids75-cell", "_blank")}>View GitHub</button>
+               <FaGithub className="github-icon" />
+               <button
+                  className="side-navbar-button"
+                  onClick={() => window.open("https://github.com/vyshnavids75-cell", "_blank")}
+               >
+                  View GitHub
+               </button>
             </div>
+
 
          </nav>
 

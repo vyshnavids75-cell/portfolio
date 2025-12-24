@@ -83,4 +83,18 @@
   transform: translateY(-2px);
 }
 
+.side-navbar-github {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.github-icon {
+  font-size: 23px;
+  position: relative;
+  top: 0rem;
+  right: 0.3rem;
+  color: #2a0f52;
+}
+
 
