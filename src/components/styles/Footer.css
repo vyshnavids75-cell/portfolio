@@ -1,0 +1,15 @@
+.footer-container {
+    width: 100%;
+    padding: 1rem 0; 
+    margin-top: 5rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #777; 
+    font-family: inherit;
+  }

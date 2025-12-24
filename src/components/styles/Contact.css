@@ -1,0 +1,67 @@
+.contact-section {
+    height: 100vh;
+    margin-left: 16rem;
+    padding: 4rem 3.5rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-container {
+    max-width: 700px;
+    margin-top: 2rem;
+  }
+  
+  .contact-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2a0f52;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-intro {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 3.5rem;
+  }
+  
+  .contact-group {
+    margin-top: 3rem;
+  }
+  
+  .contact-group-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2a0f52;
+    margin-bottom: 1.2rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 0.2rem;
+  }
+  
+  .contact-item a {
+    font-size: 1rem;
+    color: #6b2fcc;
+    text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-location {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  
