@@ -1,23 +1,22 @@
 import React from "react";
 import './styles/Home.css';
-import Footer from "./Footer";
 import VyshnaviImage from "../assets/images/Vyshnavi_image.jpg";
+import GithubIcon from "../assets/images/github-icon.png";
+import LinkedinIcon from "../assets/images/linkedin-icon.png";
+import MailIcon from "../assets/images/mail-icon.png";
 
-interface HomeProps { /*Home receives navigateTo as a prop*/
-    navigateTo: (section: string) => void;
-}
-
-const Home: React.FC<HomeProps> = ({ navigateTo }) => {
+const Home: React.FC = () => {
     return (
         <section className="home">
             <div className="home-wrapper">
 
                 <div className="home-left">
-                    <span className="home-role">SOFTWARE DEVELOPER</span>
 
                     <h1 className="home-title">
                         Hi, I'm Vyshnavi D S
                     </h1>
+
+                    <span className="home-role">SOFTWARE DEVELOPER</span>
 
                     <p className="home-description">
                         Welcome to my portfolio — a brief overview of my work. I’m a software developer who builds elegant, accessible and
@@ -25,7 +24,6 @@ const Home: React.FC<HomeProps> = ({ navigateTo }) => {
                         experience and clean design. I focus on writing scalable, maintainable code that delivers real-world impact.
                     </p>
 
-                    <button className="home-button" onClick={() => navigateTo("projects")}>View All Works</button>
                 </div>
 
                 <div className="home-center">
@@ -33,27 +31,32 @@ const Home: React.FC<HomeProps> = ({ navigateTo }) => {
                         <img src={VyshnaviImage} alt="Vyshnavi_Image" />
                     </div>
                 </div>
+
+                <div className="home-icons">
+                    <a href="mailto:vyshnavids75@gmail.com" className="mail-icon">
+                        <img src={MailIcon} alt="Mail Icon" />
+                    </a>
+
+                    <a
+                        href="https://github.com/vyshnavids75-cell"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="github-icon"
+                    >
+                        <img src={GithubIcon} alt="Github Icon" />
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/vyshnavids"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="linkedin-icon"
+                    >
+                        <img src={LinkedinIcon} alt="LinkedIn Icon" />
+                    </a>
+                </div>
+
             </div>
-
-            <div className="home-skills">
-                <div className="skill">
-                    <h4>Frontend Development</h4>
-                </div>
-
-                <div className="skill">
-                    <h4>UI Engineering</h4>
-                </div>
-
-                <div className="skill">
-                    <h4>Backend Development & Databases</h4>
-                </div>
-
-                <div className="skill">
-                    <h4>Problem Solving</h4>
-                </div>
-            </div>
-
-                <Footer />
 
         </section>
     );

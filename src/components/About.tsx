@@ -1,53 +1,34 @@
 import React from "react";
 import "./styles/About.css";
-import Footer from "./Footer";
 
 const About: React.FC = () => {
   return (
     <section className="about">
-      <div className="about-container">
-        <h2 className="about-title">Professional Summary</h2>
+      <h2 className="about-title">About Me</h2>
+      <div className="about-cards">
+        <div className="about-card">
+          <h3 className="about-card-title">🎓 Education</h3>
+          <p>B.Tech in Computer Science</p>
+          <p>College Of Engineering, Perumon</p>
+        </div>
 
-        <h3 className="about-subtitle">Software Developer at ZeroNorth, Chennai, India (formerly Alpha Ori Technologies)</h3>
+        <div className="about-card">
+          <h3 className="about-card-title">💼 Professional Experience</h3>
+          <p>Software Developer at ZeroNorth (formerly Alpha Ori Technologies), Chennai</p>
+          <p>Internship at Alpha Ori Technologies (6 months), Chennai</p>
+          <p>Over 2 years of hands-on experience in Angular, Node.js, Cassandra</p>
+          <p>Focused on scalability, performance, and clean architecture</p>
+        </div>
 
-        <p className="about-text">
-          I hold a <strong>B.Tech in Computer Science</strong> and have over{" "}
-          <strong>2 years of hands-on experience</strong> in software development.
-          I began my professional journey with a 6-month internship at{" "}
-          <strong>Alpha Ori Technologies, Chennai, India</strong>, where I gained practical
-          experience working on real-world applications and developed a strong
-          foundation in software engineering.
-        </p>
-
-        <p className="about-text">
-          After completing my internship, I became a permanent software
-          developer at Alpha Ori Technologies. Subsequently, the company merged
-          with <strong>ZeroNorth, Chennai</strong>, where I continue to work as a software
-          developer. I am currently involved in building enterprise-level
-          applications using <strong>Angular, Node.js, and Datastax</strong>,
-          with a focus on scalability, performance, and clean architecture.
-        </p>
-
-        <p className="about-text">
-          Alongside my professional work, I actively upskill myself by learning{" "}
-          <strong>React and MongoDB</strong> and have built personal projects using these technologies to strengthen my expertise.
-          These projects have helped me apply my learning in practical scenarios and gain hands-on experience with full-stack development.
-          I enjoy solving complex problems, writing clean and maintainable code,
-          and collaborating with cross-functional teams to deliver reliable,
-          user-centric solutions.
-        </p>
-
-        <p className="about-text">
-          I am driven by continuous learning and a passion for building impactful
-          software that creates meaningful user experiences.
-          My goal is to grow as a developer while creating software that makes a positive impact.
-        </p>
+        <div className="about-card">
+          <h3 className="about-card-title">🌟 Passion & Goals</h3>
+          <p>Collaborate with cross-functional teams</p>
+          <p>Driven to build impactful software and meaningful user experiences</p>
+          <p>Goal: grow as a developer while making a positive impact</p>
+        </div>
       </div>
-
-        <Footer />
-
     </section>
   );
-}
+};
 
 export default About;

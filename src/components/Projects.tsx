@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles/Projects.css";
-import Footer from "./Footer";
 
 const Projects: React.FC = () => {
     return (
@@ -29,9 +28,6 @@ const Projects: React.FC = () => {
                                 IoT data
                             </li>
                             <li>Integrated real-time data and configurable dashboards</li>
-                            <li>
-                                Collaborated with cross-functional teams on scalable features
-                            </li>
                             <li>
                                 Focused on performance, maintainability, and clean architecture
                             </li>
@@ -74,21 +70,6 @@ const Projects: React.FC = () => {
                     </div>
 
                     <div className="project-card">
-                        <h3>Netflix Clone</h3>
-                        <p className="project-meta">Practice / Learning Project</p>
-                        <p className="project-tech">React</p>
-                        <p className="project-desc">
-                            A UI-focused Netflix clone built to strengthen React fundamentals
-                            through reusable components and dynamic rendering.
-                        </p>
-                        <ul>
-                            <li>React hooks and state management</li>
-                            <li>Reusable components</li>
-                            <li>Styling and layout skills</li>
-                        </ul>
-                    </div>
-
-                    <div className="project-card">
                         <h3>Detection of PCOS using Machine Learning</h3>
                         <p className="project-meta">Academic / Final Year Project</p>
                         <p className="project-tech">Python · Machine Learning · SVM</p>
@@ -100,10 +81,6 @@ const Projects: React.FC = () => {
                         </p>
                     </div>
                 </div>
-            </div>
-
-            <div className="footer-section">
-                <Footer />
             </div>
 
         </section>

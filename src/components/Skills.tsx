@@ -1,55 +1,78 @@
 import React from "react";
 import "./styles/Skills.css";
-import Footer from "./Footer";
+
+import AngularIcon from "../assets/images/angular-icon.png";
+import JSIcon from "../assets/images/javascript-icon.png";
+import TSIcon from "../assets/images/typescript-icon.png";
+import NodeIcon from "../assets/images/nodejs-icon.svg";
+import MongoIcon from "../assets/images/MongoDB-icon.png";
+import CassandraIcon from "../assets/images/cassandra-icon.png";
+import GitIcon from "../assets/images/git-icon.png";
+import PostmanIcon from "../assets/images/postman-icon.svg";
+import NpmIcon from "../assets/images/npm-icon.svg";
 
 const Skills: React.FC = () => {
     return (
-        <section className="skills-section">
-            <h2 className="skills-title">Technical Skills</h2>
-            <div className="skills-container">
-                <div className="skills-category">
-                    <h3>Frontend Development</h3>
-                    <p>HTML, CSS, Bootstrap, JavaScript, TypeScript, Angular, React</p>
-                </div>
-                <div className="skills-category">
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Express</p>
-                </div>
+      <section className="skills-section">
+        <h2 className="skills-title">Technical Skills</h2>
 
-                <div className="skills-category">
-                    <h3>Database Technologies</h3>
-                    <p>MongoDB, Datastax</p>
-                </div>
-
-                <div className="skills-category">
-                    <h3>Tools & Utilities</h3>
-                    <p>Git, VS Code, Postman, npm</p>
-                </div>
-
-                <div className="skills-category">
-                    <h3>Soft Skills / Workflow</h3>
-                    <p>Collaboration, Problem-solving, Agile Methodology, Adaptability, Time Management</p>
-                </div>
-
+        <div className="skills-cards">
+          <div className="skills-card">
+            <h3 className="card-title">Frontend Development</h3>
+            <div className="skills-icons">
+              <div className="skill-item">
+                <img src={AngularIcon} alt="Angular" title="Angular" />
+                <span>Angular</span>
+              </div>
+              <div className="skill-item">
+                <img src={JSIcon} alt="JavaScript" title="JavaScript" />
+                <span>JavaScript</span>
+              </div>
+              <div className="skill-item">
+                <img src={TSIcon} alt="TypeScript" title="TypeScript" />
+                <span>TypeScript</span>
+              </div>
             </div>
-
-            <div className="skills-description">
-                <p>
-                    I have hands-on experience building responsive and dynamic web applications
-                    using modern frontend frameworks like {" "}<strong>Angular</strong> and {""}
-                    <strong>React</strong>. On the backend, I develop scalable APIs with {" "}
-                    <strong>Nodejs</strong>  and {" "}<strong>Express</strong> , and manage data efficiently
-                    using MongoDB and Datastax. I am also comfortable with essential development
-                    tools such as {" "} <strong>Git</strong> for version control, {" "}<strong>
-                        VS Code</strong> for coding, and {" "} <strong>Postman</strong> for API
-                    testing. Continuously learning and experimenting with new technologies, I
-                    strive to write clean, maintainable code and deliver high-quality software solutions.
-                </p>
+          </div>
+  
+          <div className="skills-card">
+            <h3 className="card-title">Backend & Databases</h3>
+            <div className="skills-icons">
+              <div className="skill-item">
+                <img src={NodeIcon} alt="Node.js" title="Node.js" />
+                <span>Node.js</span>
+              </div>
+              <div className="skill-item">
+                <img src={MongoIcon} alt="MongoDB" title="MongoDB" />
+                <span>MongoDB</span>
+              </div>
+              <div className="skill-item">
+                <img src={CassandraIcon} alt="Cassandra" title="Cassandra" />
+                <span>Cassandra</span>
+              </div>
             </div>
-
-            <Footer />
-
-        </section>
-    )
-}
-export default Skills;
+          </div>
+  
+          <div className="skills-card">
+            <h3 className="card-title">Tools & Utilities</h3>
+            <div className="skills-icons">
+              <div className="skill-item">
+                <img src={GitIcon} alt="Git" title="Git" />
+                <span>Git</span>
+              </div>
+              <div className="skill-item">
+                <img src={PostmanIcon} alt="Postman" title="Postman" />
+                <span>Postman</span>
+              </div>
+              <div className="skill-item">
+                <img src={NpmIcon} alt="npm" title="npm" />
+                <span>npm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  };
+  
+  export default Skills;

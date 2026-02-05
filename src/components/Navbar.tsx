@@ -1,93 +1,65 @@
-import React, { useState } from "react";
-import './styles/Navbar.css';
-import Home from "./Home";
-import About from "./About";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import { FaGithub } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import "./styles/Navbar.css";
+
+const sections = ["home", "about", "skills", "projects", "contact"];
 
 const Navbar: React.FC = () => {
-   const [active, setActive] = useState("home");
+  const [active, setActive] = useState("home");
 
-   const navigateTo = (section: string) => {
-      setActive(section);
-   }
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
 
-   return (
-      <>
-         <nav className="side-navbar">
-            <div className="side-navbar-logo">Vyshnavi D S</div>
-
-            <ul className="side-navbar-links">
-               <li>
-                  <span
-                     className={active === "home" ? "active" : ""}
-                     onClick={() => setActive("home")}
-                  >
-                     Home
-                  </span>
-               </li>
-
-               <li>
-                  <span
-                     className={active === "about" ? "active" : ""}
-                     onClick={() => setActive("about")}
-                  >
-                     About
-                  </span>
-               </li>
-
-               <li>
-                  <span
-                     className={active === "skills" ? "active" : ""}
-                     onClick={() => setActive("skills")}
-                  >
-                     Skills
-                  </span>
-               </li>
-
-               <li>
-                  <span
-                     className={active === "projects" ? "active" : ""}
-                     onClick={() => setActive("projects")}
-                  >
-                     Projects
-                  </span>
-               </li>
-
-               <li>
-                  <span
-                     className={active === "contact" ? "active" : ""}
-                     onClick={() => setActive("contact")}
-                  >
-                     Contact
-                  </span>
-               </li>
-            </ul>
-
-            <div className="side-navbar-github">
-               <FaGithub className="github-icon" />
-               <button
-                  className="side-navbar-button"
-                  onClick={() => window.open("https://github.com/vyshnavids75-cell", "_blank")}
-               >
-                  View GitHub
-               </button>
-            </div>
-
-
-         </nav>
-
-         {/* we have to use the same variable name in setActive and active, then only it works */}
-
-         {active === "home" && <Home navigateTo={navigateTo} />} {/*passing navigateTo as prop to Home from Navbar */}
-         {active === "about" && <About />}
-         {active === "skills" && <Skills />}
-         {active === "projects" && <Projects />}
-         {active === "contact" && <Contact />}
-      </>
-   )
-}
+  useEffect(() => {
+   const container = document.getElementById("scroll-container");
+   const sections = Array.from(
+     document.querySelectorAll<HTMLElement>("section")
+   );
+ 
+   if (!container) return;
+ 
+   const observer = new IntersectionObserver(
+     (entries) => {
+       const visible = entries
+         .filter((e) => e.isIntersecting)
+         .sort(
+           (a, b) =>
+             a.boundingClientRect.top - b.boundingClientRect.top
+         );
+ 
+       if (visible.length > 0) {
+         setActive(visible[0].target.id);
+       }
+     },
+     {
+       root: container,          // ✅ IMPORTANT
+       rootMargin: "-40% 0px -50% 0px",
+       threshold: 0,
+     }
+   );
+ 
+   sections.forEach((section) => observer.observe(section));
+ 
+   return () => observer.disconnect();
+ }, []);
+ 
+  return (
+    <nav className="side-navbar">
+      <ul className="side-navbar-links">
+        {sections.map((section) => (
+          <li key={section}>
+            <span
+              className={active === section ? "active" : ""}
+              onClick={() => scrollToSection(section)}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
 export default Navbar;

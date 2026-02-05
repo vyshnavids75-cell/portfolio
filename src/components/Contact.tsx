@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles/Contact.css";
-import Footer from "./Footer"
 
 const Contact: React.FC = () => {
     return (
@@ -13,11 +12,6 @@ const Contact: React.FC = () => {
                         vyshnavids75@gmail.com
                     </a>
                 </div>
-
-                <div className="contact-item">
-                    <span className="contact-label">Phone</span>
-                    <a href="tel:+918075246207">+91 8075246207</a>
-                </div>
             </div>
 
             <div className="contact-group">
@@ -26,11 +20,11 @@ const Contact: React.FC = () => {
                 <div className="contact-item">
                     <span className="contact-label">LinkedIn</span>
                     <a
-                        href="https://www.linkedin.com/in/vyshnavi-d-s-2b9a96377"
+                        href="https://www.linkedin.com/in/vyshnavids"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        https://www.linkedin.com/in/vyshnavi-d-s-2b9a96377
+                        https://www.linkedin.com/in/vyshnavids
                     </a>
                 </div>
 
@@ -57,8 +51,6 @@ const Contact: React.FC = () => {
             <p className="contact-intro">
                 Feel free to reach out via email or LinkedIn.
             </p>
-
-                <Footer />
                 
         </section>
     )
